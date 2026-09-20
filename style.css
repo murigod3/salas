@@ -1,0 +1,1526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0d;
+    color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(11, 11, 13, 0.9);
+
+    border-bottom: 1px solid #242428;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 80px rgba(255, 255, 255, 0.015),
+        0 0 0 160px rgba(255, 255, 255, 0.01);
+
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: #8c8c94;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.95;
+    font-weight: 500;
+    letter-spacing: -4px;
+    margin-bottom: 35px;
+
+    text-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.hero-text {
+    max-width: 570px;
+    color: #a7a7ad;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    letter-spacing: 0.1px;
+}
+
+.explore-button {
+    padding: 15px 28px;
+    border: 1px solid #55555c;
+    background: #eeeeee;
+    color: #111111;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.explore-button:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   SEÇÃO DE JOGOS
+========================= */
+
+.games {
+    padding: 120px 6%;
+}
+
+.section-title {
+    max-width: 650px;
+
+    margin-bottom: 70px;
+}
+
+.section-title p {
+    color: #77777f;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -2px;
+    max-width: 750px;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.game-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+.game-card {
+    background: #141417;
+
+    border: 1px solid #252529;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s,
+        border-color 0.4s;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #44444b;
+}
+
+
+/* IMAGENS */
+
+.game-image {
+    height: 390px;
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* Por enquanto usamos cores.
+   Depois colocaremos as imagens reais. */
+
+.minecraft {
+    background-image: url("imagens/minecraft3ima.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.stardew {
+    background-image: url("imagens/stadew1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.life {
+    background-image: url("imagens/lifeis01.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* INFORMAÇÕES */
+
+.game-info {
+    padding: 30px;
+    background: #111;
+}
+
+.game-info span {
+    color: #77777f;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.game-info h3 {
+    font-size: 30px;
+
+    font-weight: 500;
+
+    margin: 12px 0;
+}
+
+.game-info p {
+    color: #929299;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+.game-info a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.game-info a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+ footer {
+    padding: 50px 7%;
+    border-top: 1px solid #242428;
+    color: #65656b;
+    font-size: 12px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 80px 7%;
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-image {
+        height: 400px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        height: 70px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .games {
+        padding: 80px 7%;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .game-image {
+        height: 330px;
+    }
+
+}/* =========================
+   PÁGINA DO MINECRAFT
+========================= */
+
+.minecraft-page {
+    background: #08100b;
+}
+
+
+/* HERO DO MINECRAFT */
+
+.minecraft-page .game-hero {
+    min-height: 650px;
+    display: flex;
+    align-items: flex-end;
+    padding: 120px 10%;
+    background:
+    radial-gradient(
+        circle at 70% 35%,
+        #26352c 0%,
+        #151c18 35%,
+        #080a09 75%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.minecraft-page .game-hero {
+    min-height: 650px;
+    display: flex;
+    align-items: flex-end;
+    padding: 120px 10%;
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            #234d30 0%,
+            #102518 35%,
+            #08100b 75%
+        );
+    position: relative;
+    overflow: hidden;
+}
+
+.minecraft-page .game-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.55),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+.minecraft-page .game-hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 1;
+}
+.minecraft-page .game-hero-content {
+    animation: minecraftHeroFade 1.2s ease-out both;
+}
+
+@keyframes minecraftHeroFade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.minecraft-page .game-hero h1 {
+    font-size: clamp(65px, 11vw, 150px);
+    line-height: 0.88;
+    letter-spacing: -6px;
+    font-weight: 600;
+    margin: 15px 0 25px;
+    text-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.minecraft-page .game-hero p:last-child {
+    color: #b8c5bb;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 520px;
+    letter-spacing: 0.2px;
+    opacity: 0.9;
+}
+
+.minecraft-page .game-hero-content {
+    max-width: 850px;
+}
+
+.minecraft-page .game-hero h1 {
+    font-size: clamp(65px, 11vw, 150px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    font-weight: 600;
+
+    margin: 15px 0 25px;
+}
+
+.minecraft-page .game-hero p:last-child {
+    color: #a8b7aa;
+
+    font-size: 18px;
+
+    max-width: 500px;
+}
+
+
+/* ARTIGO */
+
+.minecraft-page .article {
+    max-width: 900px;
+    margin: auto;
+    padding: 150px 40px;
+}
+
+.minecraft-page .article-label {
+    color: #6f9f78;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 120px;
+    margin-bottom: 22px;
+    font-weight: 500;
+}
+
+.minecraft-page .article h2 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin-bottom: 35px;
+    max-width: 800px;
+}
+
+.minecraft-page .article > p:not(.article-label) {
+    color: #a6aea8;
+    font-size: 17px;
+    line-height: 1.9;
+    max-width: 680px;
+    margin-bottom: 32px;
+}
+
+
+/* IMAGENS */
+
+.minecraft-page .article-image {
+    width: 100%;
+    height: 500px;
+    margin: 70px 0;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #203326;
+    border-radius: 2px;
+    filter: brightness(0.9);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.minecraft-page .article-image:hover {
+    transform: scale(1.015);
+    filter: brightness(1);
+}
+
+
+/* IMAGEM TEMPORÁRIA 1 */
+
+.minecraft-page .minecraft-image-1 {
+    background:
+        linear-gradient(
+            135deg,
+            #315f3b,
+            #142b1b 50%,
+            #071009
+        );
+}
+
+
+/* IMAGEM TEMPORÁRIA 2 */
+
+.minecraft-page .minecraft-image-2 {
+    background:
+        linear-gradient(
+            135deg,
+            #1d4528,
+            #0d2013 60%,
+            #050a06
+        );
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.minecraft-page .article-image {
+    transition: transform 0.5s ease;
+}
+
+.minecraft-page .article-image:hover {
+    transform: scale(1.015);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    .minecraft-page .game-hero {
+        min-height: 550px;
+
+        padding: 70px 7%;
+    }
+
+    .minecraft-page .game-hero h1 {
+        font-size: 65px;
+
+        letter-spacing: -3px;
+    }
+
+    .minecraft-page .article {
+        padding: 80px 7%;
+    }
+
+    .minecraft-page .article-label {
+        margin-top: 70px;
+    }
+
+    .minecraft-page .article-image {
+        height: 350px;
+
+        margin: 40px 0;
+    }
+
+}/* IMAGENS DAS PÁGINAS DOS JOGOS */
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 50px auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}/* IDENTIDADE DA PÁGINA MINECRAFT */
+
+.minecraft-page .game-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.minecraft-page .game-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom, transparent 40%, #08100b 100%);
+    pointer-events: none;
+}
+
+.minecraft-page .game-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.minecraft-page .game-hero h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.minecraft-page .game-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #b9c8bd;
+}/* SEÇÕES DOS JOGOS */
+
+.minecraft-page .game-article {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.minecraft-page .section-label {
+    display: block;
+    margin-bottom: 18px;
+    color: #6fa87a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.minecraft-page .game-article h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #f1f4f1;
+}
+
+.minecraft-page .game-article p {
+    max-width: 760px;
+    color: #b5bdb7;
+    font-size: 1.08rem;
+    line-height: 1.9;
+}
+
+.minecraft-page .game-article + .game-article {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}/* HEADER DAS PÁGINAS */
+
+.minecraft-page header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.15),
+        transparent
+    );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.minecraft-page header .logo {
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.minecraft-page header nav a {
+    transition: color 0.3s ease;
+}
+
+.minecraft-page header nav a:hover {
+    color: #8fc99a;
+}/* REFLEXÃO */
+
+.minecraft-page .reflection {
+    max-width: 900px;
+    margin: 120px auto 140px;
+    padding: 80px 70px;
+    border: 1px solid rgba(143, 201, 154, 0.15);
+    border-radius: 4px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 35, 24, 0.75),
+            rgba(8, 16, 11, 0.9)
+        );
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.minecraft-page .reflection h2 {
+    max-width: 700px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 30px;
+}
+
+.minecraft-page .reflection p {
+    max-width: 720px;
+    color: #b5bdb7;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.minecraft-page .reflection p:last-child {
+    margin-bottom: 0;
+}/* PÁGINA STARDEW VALLEY */
+
+.stardew-page {
+    background: #0b0d0c;
+    color: #f1f3ef;
+}
+
+
+.stardew-page .game-hero {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(61, 92, 63, 0.45),
+            rgba(20, 32, 22, 0.35) 45%,
+            #0b0d0c 75%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.stardew-page .game-hero h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    letter-spacing: 4px;
+    line-height: 0.95;
+    font-weight: 500;
+    margin: 20px 0;
+    text-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.stardew-page .game-hero p {
+    max-width: 600px;
+    color: #c2c9c1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+.stardew-page .game-hero-content {
+    animation: stardewHeroFade 1.2s ease-out both;
+}
+
+@keyframes stardewHeroFade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.stardew-page .game-article {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 40px;
+}
+
+.stardew-page .section-label {
+    display: block;
+    margin-bottom: 18px;
+    color: #91ad79;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.stardew-page .game-article h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+.stardew-page .game-article p {
+    max-width: 700px;
+    color: #b5bdb7;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.stardew-page .game-article + .game-article {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stardew-page .reflection {
+    max-width: 900px;
+    margin: 80px auto 120px;
+    padding: 70px 60px;
+    border: 1px solid rgba(145, 173, 121, 0.15);
+    border-radius: 20px;
+    background: rgba(35, 45, 30, 0.4);
+}
+
+.stardew-page .reflection h2 {
+    max-width: 700px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 30px;
+}
+
+.stardew-page .reflection p {
+    max-width: 720px;
+    color: #b5bdb7;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+.stardew-page .game-hero > * {
+    animation: stardewHeroFade 1.2s ease-out both;
+}
+
+.stardew-page .game-hero h1 {
+    animation-delay: 0.15s;
+}
+
+.stardew-page .game-hero p {
+    animation-delay: 0.3s;
+}
+
+@keyframes stardewHeroFade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   SOBRE O SALAS
+========================= */
+
+.about {
+    padding: 120px 8%;
+    background: #111;
+    color: #fff;
+}
+
+.about-content {
+    max-width: 800px;
+}
+
+.about .eyebrow {
+    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #aaa;
+}
+
+.about h2 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 500;
+}
+
+.about p:not(.eyebrow) {
+    max-width: 650px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #bbb;
+}.game-image.stardew {
+    background-image: url("imagens/stardew11.jpg");
+    background-size: cover;
+}/* =========================
+   BUSCA
+========================= */
+
+.search-box {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    z-index: 10;
+}
+
+.search-box.active {
+    display: block;
+}
+
+.search-box input {
+    width: 220px;
+    padding: 12px 15px;
+    border: 1px solid #444;
+    background: #111;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #888;
+}
+
+
+.game-card {
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+}
+
+.game-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.game-card:hover .game-image {
+    transform: scale(1.04);
+    filter: brightness(0.85);
+}
+
+.game-image {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}/* =========================
+   CARDS CLICÁVEIS
+========================= */
+
+.game-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}/* =========================
+   RESPONSIVO — CELULAR
+========================= */
+/* HERO — HOME */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    padding: 100px 12%;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {     header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-button {
+        margin-left: auto;
+    }
+
+
+    /* HEADER */
+    header {
+        padding: 20px 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .search-box {
+        right: 5%;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: 80vh;
+        padding: 80px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+
+    /* JOGOS */
+    .games {
+        padding: 80px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    /* CARDS */
+    .game-card {
+        width: 100%;
+    }
+
+
+    /* SOBRE */
+    .about {
+        padding: 80px 5%;
+    }
+
+    .about h2 {
+        font-size: 36px;
+    }
+
+    .about p:not(.eyebrow) {
+        font-size: 16px;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 30px 5%;
+        text-align: center;
+    }
+.stardew-page .game-hero {
+    min-height: 550px;
+    padding: 100px 5% 70px;
+}
+
+.stardew-page .game-hero h1 {
+    font-size: clamp(3rem, 14vw, 5rem);
+    letter-spacing: 2px;
+}
+
+.stardew-page .game-article {
+    padding: 80px 5%;
+}
+
+.stardew-page .game-article h2 {
+    font-size: 34px;
+}
+
+.stardew-page .game-article p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.stardew-page .article-image {
+    height: 300px;
+    margin: 50px auto;
+}
+
+.stardew-page .game-article:last-of-type {
+    margin: 70px 5% 100px;
+    padding: 50px 30px;
+}
+    /* Life is Strange — mobile */
+
+    .life-page .game-hero {
+        min-height: 550px;
+        padding: 100px 5% 70px;
+    }
+
+    .life-page .game-hero h1 {
+        font-size: clamp(3rem, 14vw, 5rem);
+        letter-spacing: -2px;
+    }
+
+    .life-page .game-article {
+        padding: 80px 5%;
+    }
+
+    .life-page .game-article h2 {
+        font-size: 34px;
+    }
+
+    .life-page .game-article p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .life-page .article-image {
+        height: 300px;
+        margin: 50px auto;
+    }
+
+    .life-page .reflection {
+        margin: 70px 5% 100px;
+        padding: 50px 30px;
+    }
+    /* =========================
+   LIFE IS STRANGE — PAUSA
+========================= */
+
+.life-page .reflection {
+    position: relative;
+    overflow: hidden;
+}
+
+.life-page .reflection::before {
+    content: "";
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -100px;
+    top: -100px;
+
+    border: 1px solid rgba(180, 165, 220, 0.08);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 45px rgba(180, 165, 220, 0.02),
+        0 0 0 90px rgba(180, 165, 220, 0.015);
+
+    pointer-events: none;
+}
+
+.life-page .reflection > * {
+    position: relative;
+    z-index: 1;
+}
+
+    .life-page .reflection h2 {
+        font-size: 34px;
+    }
+}
+.life-page .game-article:not(:last-of-type)::after {
+    height: 45px;
+    bottom: -22px;
+}
+
+ /* =========================
+   IMAGENS — STARDEW VALLEY
+========================= */
+
+.stardew-page .article-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 70px auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}/* =========================
+   DESTAQUE — FORA DO JOGO
+========================= */
+
+.stardew-page .game-article:last-of-type {
+    max-width: 900px;
+    margin: 100px auto 140px;
+    padding: 80px 70px;
+    border: 1px solid rgba(143, 201, 154, 0.15);
+    border-radius: 4px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25, 40, 28, 0.75),
+            rgba(10, 15, 11, 0.9)
+        );
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.stardew-page .game-article:last-of-type h2 {
+    max-width: 700px;
+}
+
+.stardew-page .game-article:last-of-type p {
+    max-width: 720px;
+} /* =========================
+   LIFE IS STRANGE — HERO
+========================= */
+
+.life-page .game-hero {
+    min-height: 650px;
+    display: flex;
+    align-items: flex-end;
+    padding: 120px 10%;
+
+    background:
+        radial-gradient(
+            circle at 70% 35%,
+            #4b4268 0%,
+            #252335 35%,
+            #0d0d12 75%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.life-page .game-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.65),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+.life-page .game-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -120px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(180, 165, 220, 0.08);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 70px rgba(180, 165, 220, 0.025),
+        0 0 0 140px rgba(180, 165, 220, 0.015);
+
+    pointer-events: none;
+}
+@keyframes lifeCircle {
+
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.04);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.7;
+    }
+}
+
+.life-page .game-hero::before {
+    animation: lifeCircle 8s ease-in-out infinite;
+}
+
+.life-page header {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.15),
+        transparent
+    );
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.life-page .game-hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 1;
+}
+.life-page .game-hero-content {
+    animation: lifeHeroFade 1.2s ease-out both;
+}
+
+@keyframes lifeHeroFade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.life-page .game-hero h1 {
+    font-size: clamp(55px, 10vw, 135px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+    font-weight: 500;
+    margin: 15px 0 25px;
+
+    text-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.life-page .game-hero p:last-child {
+    color: #c4bfd2;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 520px;
+    opacity: 0.9;
+} /* =========================
+   LIFE IS STRANGE — CONTEÚDO
+========================= */
+
+.life-page .game-article {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 40px;
+}
+
+.life-page .game-article h2 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -2,0px;
+    margin-bottom: 35px;
+    max-width: 800px;
+}
+.life-page .game-article h2 {
+    transition: letter-spacing 0.6s ease, opacity 0.6s ease;
+}
+
+.life-page .game-article:hover h2 {
+    letter-spacing: -1px;
+    opacity: 0.9;
+}
+
+.life-page .game-article p {
+    color: #b5b0c0;
+    font-size: 17px;
+    line-height: 1.9;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+.life-page .game-article {
+    transition: transform 0.4s ease;
+}
+
+.life-page .game-article:hover {
+    transform: translateY(-3px);
+}
+
+.life-page .section-label {
+    display: block;
+    color: #9a8fc0;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+    font-weight: 500;
+} /* =========================
+   LIFE IS STRANGE — REFLEXÃO
+========================= */
+
+.life-page .reflection {
+    max-width: 900px;
+    margin: 100px auto 140px;
+    padding: 80px 70px;
+
+    border: 1px solid rgba(154, 143, 192, 0.18);
+    border-radius: 4px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(45, 39, 65, 0.75),
+            rgba(10, 10, 15, 0.92)
+        );
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.life-page .reflection h2 {
+    max-width: 700px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.life-page .reflection p {
+    max-width: 720px;
+    color: #bdb8c7;
+    font-size: 1.05rem;
+    line-height: 1.9;
+} /* =========================
+   LIFE IS STRANGE — IMAGENS
+========================= */
+
+.life-page .article-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    object-fit: cover;
+    margin: 70px auto;
+    border-radius: 4px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+
+    filter: brightness(0.9);
+
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.life-page .article-image:hover {
+    transform: scale(1.015);
+    filter: brightness(1);
+}
+/* =========================
+   LIFE IS STRANGE — LINHA ENTRE SEÇÕES
+========================= */
+
+.life-page .game-article {
+    position: relative;
+}
+
+.life-page .game-article:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+
+    width: 1px;
+    height: 70px;
+
+    left: 50%;
+    bottom: -35px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(154, 143, 192, 0.25),
+        rgba(154, 143, 192, 0)
+    );
+
+    transform: translateX(-50%);
+    pointer-events: none;
+}
