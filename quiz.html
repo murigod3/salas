@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Descubra — SALAS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quiz-page">
+
+<header>
+    <div class="logo">SALAS</div>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#jogos">Jogos</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="quiz.html">Descubra</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="quiz-hero" id="quizStart">
+
+        <p class="eyebrow">SALAS • DESCUBRA</p>
+
+        <h1>
+            Qual história<br>
+            combina com você?
+        </h1>
+
+        <p>
+            Responda algumas perguntas e descubra
+            qual jogo do SALAS pode combinar mais com você.
+        </p>
+
+        <button id="startQuiz" class="quiz-button">
+            Começar
+        </button>
+
+    </section>
+
+
+    <section class="quiz-question" id="quizQuestion">
+
+        <p class="eyebrow" id="questionNumber">
+            PERGUNTA 01
+        </p>
+
+        <h2 id="questionText">
+            Você gosta de explorar e descobrir coisas por conta própria?
+        </h2>
+
+        <div class="quiz-options">
+
+            <button class="answer-button" data-answer="sim">
+                Sim
+            </button>
+
+            <button class="answer-button" data-answer="nao">
+                Não
+            </button>
+
+        </div>
+
+    </section>
+<section class="quiz-result" id="quizResult">
+
+    <p class="eyebrow">SEU RESULTADO</p>
+
+    <h2 id="resultTitle">Minecraft</h2>
+
+    <p id="resultText">
+        Seu resultado aparecerá aqui.
+    </p>
+
+    <a id="resultLink" class="quiz-button" href="#">
+        Conhecer este jogo →
+    </a>
+
+<button id="restartQuiz" class="quiz-restart">
+    Refazer o quiz
+</button>
+
+</section>
+</main>
+
+<footer>
+    <p>© 2026 SALAS — Onde histórias também são vividas.</p>
+    <p>Um projeto criado por Murillo Caires Santos.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
