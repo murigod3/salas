@@ -1480,8 +1480,8 @@ nav a:hover {
     display: block;
     width: 100%;
     max-width: 900px;
-    height: auto;
-    object-fit: contain;
+    height: auto !important;
+    object-fit: contain !important;
     margin: 70px auto;
     border-radius: 4px;
 
@@ -1492,11 +1492,7 @@ nav a:hover {
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.life-page .article-image {
-    height: auto !important;
-    width: 100% !important;
-    object-fit: contain !important;
-}
+
 
 .life-page .article-image:hover {
     transform: scale(1.015);
@@ -1781,4 +1777,13 @@ nav a:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media (max-width: 768px) {
+
+    .minecraft-page .game-hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
 }
