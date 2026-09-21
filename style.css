@@ -1492,6 +1492,12 @@ nav a:hover {
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
+.life-page .article-image {
+    height: auto !important;
+    width: 100% !important;
+    object-fit: contain !important;
+}
+
 .life-page .article-image:hover {
     transform: scale(1.015);
     filter: brightness(1);
