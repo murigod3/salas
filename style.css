@@ -310,7 +310,12 @@ nav a:hover {
     color: #65656b;
     font-size: 12px;
 }
-
+  footer p:last-child {
+    margin-top: 8px;
+    color: #44444a;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
 
 /* =========================
    CELULAR
