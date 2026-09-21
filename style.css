@@ -1172,10 +1172,7 @@ nav a:hover {
         line-height: 1.8;
     }
 
-    .life-page .article-image {
-        height: 300px;
-        margin: 50px auto;
-    }
+    
 
     .life-page .reflection {
         margin: 70px 5% 100px;
@@ -1483,8 +1480,8 @@ nav a:hover {
     display: block;
     width: 100%;
     max-width: 900px;
-    height: 500px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     margin: 70px auto;
     border-radius: 4px;
 
