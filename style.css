@@ -355,7 +355,7 @@ nav a:hover {
     }
 
     nav {
-        display: none;
+        display: flex;
     }
 
     .hero {
