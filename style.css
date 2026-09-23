@@ -2172,3 +2172,40 @@ nav a:hover {
 .game-stardew {
     background-image: url("imagens/stadew1.jpg");
 }
+
+@media (max-width: 768px) {
+
+    .category-game-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        gap: 18px !important;
+    }
+
+    .category-game-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 260px !important;
+
+        display: flex !important;
+        align-items: flex-end !important;
+
+        overflow: hidden !important;
+    }
+
+    .category-game-content {
+        width: 100% !important;
+        padding: 24px !important;
+    }
+
+    .category-game-content h3 {
+        font-size: 26px !important;
+        line-height: 1.1 !important;
+    }
+
+    .category-game-content p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+}
