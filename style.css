@@ -1294,7 +1294,12 @@ nav a:hover {
 }
 
 .category-game-card {
+    width: 100%;
     min-height: 240px;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 }
 
 .category-game-content {
