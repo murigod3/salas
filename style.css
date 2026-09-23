@@ -1259,7 +1259,53 @@ nav a:hover {
 
 .stardew-page .game-article:last-of-type p {
     max-width: 720px;
-} /* =========================
+}
+
+.category-hero {
+    min-height: 70vh;
+    padding: 120px 6% 80px;
+}
+
+.category-hero h1 {
+    font-size: 52px;
+    letter-spacing: -3px;
+}
+
+.category-hero p:not(.eyebrow) {
+    font-size: 15px;
+}
+
+.category-intro {
+    padding: 80px 6%;
+}
+
+.category-intro h2 {
+    font-size: 38px;
+}
+
+.category-games {
+    padding: 20px 6% 80px;
+}
+
+.category-game-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.category-game-card {
+    min-height: 240px;
+}
+
+.category-game-content {
+    padding: 24px;
+}
+
+.category-game-content h3 {
+    font-size: 25px;
+}
+
+/* =========================
    LIFE IS STRANGE — HERO
 ========================= */
 
@@ -1939,4 +1985,174 @@ nav a:hover {
         font-size: 28px;
     }
 
+} /* ============================= */
+/* PÁGINAS DE CATEGORIA */
+/* ============================= */
+
+.category-page {
+    background: #0b0b0e;
+    color: #ffffff;
+}
+
+.category-hero {
+    min-height: 70vh;
+    padding: 150px 7% 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(120, 90, 160, 0.18),
+            transparent 55%
+        );
+}
+
+.category-hero h1 {
+    font-size: clamp(55px, 9vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    font-weight: 500;
+    margin: 20px 0 30px;
+    max-width: 1000px;
+}
+
+.category-hero p:not(.eyebrow) {
+    max-width: 600px;
+    color: #8d8d94;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.category-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 7%;
+}
+
+.category-intro h2 {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    font-weight: 500;
+    margin: 15px 0 35px;
+}
+
+.category-intro p:not(.eyebrow) {
+    max-width: 700px;
+    color: #8d8d94;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* ============================= */
+/* JOGOS DAS CATEGORIAS */
+/* ============================= */
+
+.category-games {
+    padding: 40px 7% 120px;
+}
+
+.category-game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 55px;
+}
+
+.category-game-card {
+    position: relative;
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+    text-decoration: none;
+    color: #ffffff;
+
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #252529;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.category-game-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.88)
+        );
+
+    transition: background 0.4s ease;
+}
+
+.category-game-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding: 28px;
+}
+
+.category-game-content span {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    color: #b5b5bc;
+}
+
+.category-game-content h3 {
+    margin: 0 0 8px;
+
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.category-game-content p {
+    margin: 0 0 18px;
+
+    color: #b0b0b7;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.category-game-content strong {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.category-game-card:hover {
+    transform: translateY(-6px);
+    border-color: #44444a;
+}
+
+.category-game-card:hover::before {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.02),
+            rgba(0, 0, 0, 0.78)
+        );
+}
+
+.game-life {
+    background-image: url("imagens/lifeis01.jpg");
+}
+
+.game-stardew {
+    background-image: url("imagens/stadew1.jpg");
 }
