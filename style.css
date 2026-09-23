@@ -2209,3 +2209,29 @@ nav a:hover {
     }
 
 }
+
+@media (max-width: 600px) {
+
+    .category-game-grid {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 35px !important;
+    }
+
+    .category-game-card {
+        display: flex !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        min-height: 260px !important;
+        margin-bottom: 18px !important;
+
+        align-items: flex-end !important;
+        box-sizing: border-box !important;
+    }
+
+    .category-game-content {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+}
