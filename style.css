@@ -1297,9 +1297,10 @@ nav a:hover {
     width: 100%;
     min-height: 240px;
 
-    background-size: cover !important;
+    background-size: contain !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
+    background-color: #111;
 }
 
 .category-game-content {
