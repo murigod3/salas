@@ -1303,6 +1303,16 @@ nav a:hover {
     background-color: #111;
 }
 
+.game-life {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+}
+
+.game-stardew {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+}
+
 .category-game-content {
     padding: 24px;
 }
